@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +10,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Document</title>
 </head>
+
 <body>
-<div class="container p-3 ">
-    <h2 class="text-muted">Bookmark</h2>
-    <hr>
-</div>
-
-<div class="container bg-light p-3">
-    <h3 class="pb-4">Bookmark Your Favorite Sites</h3>
-
-    <div class="mb-4">
-        <label  class="form-label">SiteName</label>
-        <input type="text" class="form-control SiteName"  placeholder="SiteName">
+    <div class="container p-3 ">
+        <h2 class="text-muted">Bookmark</h2>
+        <hr>
     </div>
-    <div class="mb-3">
-        <label  class="form-label">SiteUlr</label>
-        <input type="text" class="form-control SiteUlr"  placeholder="SiteUlr">
-    </div>
-    <button class="btn btn-info "  id="addbtn">Add your site</button>
 
-</div>
-<div class="container mt-4">
+    <div class="container bg-light p-3">
+        <h3 class="pb-4">Bookmark Your Favorite Sites</h3>
+
+        <div class="mb-4">
+            <label class="form-label">SiteName</label>
+            <input type="text" class="form-control SiteName" placeholder="SiteName">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">SiteUlr</label>
+            <input type="text" class="form-control SiteUlr" placeholder="SiteUlr">
+        </div>
+        <button class="btn btn-info " id="addbtn">Add your site</button>
+
+    </div>
+    <div class="container mt-4">
         <input type="text" class="form-control search" onkeyup="searchItem(this.value)" placeholder="search...">
-</div>
+    </div>
 
-<div class="container mt-4 bg-light">
-    <table class="table">
-        <thead>
+    <div class="container mt-4 bg-light">
+        <table class="table">
+            <thead>
 
-        </thead>
-        <tbody class="tableBady">
-            
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody class="tableBady">
 
-
+            </tbody>
+        </table>
+    </div>
 
 
+
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
