@@ -24,15 +24,15 @@ addbtn.addEventListener("click", function () {
   clearInput();
 });
 //display data
-function displayData(bookArr) {
+function displayData(arry) {
   let box = ``;
-for (let i=0;i<bookArr.length;i++) {
+for (let i=0;i<arry.length;i++) {
     box += `
                     <tr>
-                            <td>#${i + 1}</td>
-                            <td>${bookArr[i].namebook}</td>
+                            
+                            <td>${arry[i].namebook}</td>
                             <td><button class="btn btn-info"><a href="${
-                              bookArr[i].ulrbook
+                              arry[i].ulrbook
                             }" class="text-white text-decoration-none">visit</a></button></td>
                             <td><button class="btn btn-danger" onclick="updataItem(${i})">updata</button></td>
                             <td><button class="btn btn-dark" onclick="deleteItem(${i})">delete</button></td>
