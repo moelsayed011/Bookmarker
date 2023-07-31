@@ -3,7 +3,7 @@ let siteUlr = document.querySelector(".SiteUlr");
 let addbtn = document.querySelector("#addbtn");
 let tableBady = document.querySelector(".tableBady");
 let bookArr;
-if (localStorage.getItem("bookArr") == "") {
+if (localStorage.getItem("bookArr") == null) {
   bookArr = [];
 } else {
   bookArr = JSON.parse(localStorage.getItem("bookArr"));
@@ -24,16 +24,14 @@ addbtn.addEventListener("click", function () {
   clearInput();
 });
 //display data
-function displayData(arry) {
+function displayData(bookArr) {
   let box = ``;
-for (let i=0;i<arry.length;i++) {
+  for (let i = 0; i < bookArr.length; i++) {
     box += `
                     <tr>
                             
-                            <td>${arry[i].namebook}</td>
-                            <td><button class="btn btn-info"><a href="${
-                              arry[i].ulrbook
-                            }" class="text-white text-decoration-none">visit</a></button></td>
+                            <td>${bookArr[i].namebook}</td>
+                            <td><button class="btn btn-info"><a href="${bookArr[i].ulrbook}" class="text-white text-decoration-none">visit</a></button></td>
                             <td><button class="btn btn-danger" onclick="updataItem(${i})">updata</button></td>
                             <td><button class="btn btn-dark" onclick="deleteItem(${i})">delete</button></td>
                         </tr> 
